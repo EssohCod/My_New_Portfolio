@@ -1,0 +1,125 @@
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    margin: 0px 170px;
+    align-items: center;
+    justify-content: center;
+}
+.home img{
+    width: 450px;
+    height: auto;
+    margin-top: 140px;
+}
+.home h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 65px;
+    color: #DCDCDC;
+}
+.home h1 span{
+    background: linear-gradient(270deg, #F8F8FF 15%, #B0BEC5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: #000;
+}
+.home p{
+    /* width: 85%; */
+    text-align: center;
+    font-size: 20px;
+    line-height: 33px;
+    color: #DCDCDC;
+}
+.hero_action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #DCDCDC;
+    font-family: "Outfit", sans-serif;
+}
+/* .hero_connect{
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #e6a23d -5.09%, #ff158a 106.28%);
+    cursor: pointer;
+    transition: 0.5s;
+} */
+
+.home_connect button{
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    color: #DCDCDC;
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background: linear-gradient(264deg, #f5e642 -57.09%, #f30c0c 106.28%);
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.home_resume button{
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid #DCDCDC;
+    color: #DCDCDC;
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.home_connect button:hover{
+    transform: scale(1.01);
+    font-weight: 700;
+}
+.home_resume button:hover{
+    transform: scaleX(1.01);
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .home{
+        align-items: center;
+        justify-content: center;
+    }
+    .home img{
+        width: 350px;
+        /* margin-left: 100px; */
+    }
+    .home h1{
+        text-align: center;
+        font-size:32px;
+        font-weight: 800;
+        line-height: 35px;
+        color: #B0BEC5;
+        width: 90%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .home p{
+        width: 90%;
+        text-align: justify;
+    }
+    .hero_action{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        color: #DCDCDC;
+        font-family: "Outfit", sans-serif;
+    }
+}
+
+@media (max-width: 480px) {
+  /* Your mobile styles here */
+}

@@ -14,7 +14,9 @@
     background: #ffdb32;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
+.logo h1{
+    font-size: 22px;
+}
 
 .navbar_container{
     top: 0;
@@ -63,7 +65,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar{
-        margin:  10px 40px;
+        /* margin:  10px 40px; */
         background: none;
     }
     .menu_bars{
@@ -84,7 +86,7 @@
         align-items: start;
         top: 0;
         gap: 30px;
-        background-color: #1F0016;
+        /* background-color: #1F0016; */
         width: 350px;
         height: 100%;
         z-index: 2;
@@ -96,5 +98,17 @@
         padding-left: 100px;
         flex-direction: row;
         gap: 20px;
+    }
+    .nav_menu li img{
+        width: 50px;
+        height: 4px;
+        display: flex;
+        margin: auto;
+    }
+    .nav_menu li{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
     }
 }

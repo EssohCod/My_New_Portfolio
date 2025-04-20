@@ -1,0 +1,81 @@
+.mywork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px 170px;
+    color: #DCDCDC;
+}
+
+.mywork_title h1{
+    padding: 0px 30px;
+    font-size: 70px;
+    font-weight: 600;
+}
+.mywork_title p{
+    font-size: 22px;
+}
+.mywork_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+}
+.mywork_container img{
+    box-sizing: border-box;
+    width: 300px;
+    height: 260px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.mywork_container img:hover{
+    transform: scale(1.10);
+    border: 4px solid #DCDCDC;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.show_more_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid #DCDCDC;
+    color: #DCDCDC;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    cursor: pointer;
+    transition: 0.4s all;
+    background: transparent;
+}
+
+.show_more_btn button img {
+    width: 20px;
+    height: auto;
+}
+
+.show_more_btn button:hover{
+    transform: scaleX(1.01);
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .mywork_title h1{
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .mywork_container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .mywork_title p{
+        width: 90%;
+        font-size: 20px;
+        text-align: justify;
+        margin-left: 20px;
+    }
+}
