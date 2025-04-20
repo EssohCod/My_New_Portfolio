@@ -7,8 +7,8 @@ const Portfolio = () => {
   return (
     <div id='services' className='services'>
       <div className="services_title">
-        <h1>What I Do</h1>
-        <img src="" alt="" />
+        <h1>What I Can Do For You</h1>
+        {/* <img src="" alt="" /> */}
       </div>
 
       <div className="services_container">

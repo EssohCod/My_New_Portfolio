@@ -50,6 +50,7 @@
     cursor: pointer;
     transition: 0.4s all;
     background: transparent;
+    margin-bottom: 80px;
 }
 
 .show_more_btn button img {
