@@ -245,13 +245,13 @@
         justify-content: center;
         margin-top: -50px;
         width: 100%;
-        max-width: 350px;
+        /* max-width: 350px; */
     }
     .contact_left p{
         font-size: 20px;
         display: flex;
         width: 100%;
-        max-width: 350px;
+        /* max-width: 350px; */
         text-align: center;
     }
     .contact_details{

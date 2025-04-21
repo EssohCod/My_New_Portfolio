@@ -160,7 +160,7 @@
         justify-content: center;
         gap: 50px;
         width: 100%;
-        max-width: 480px;
+        /* max-width: 480px; */
     }
     .about_sections{
         display: flex;
@@ -176,18 +176,27 @@
         width: 200px;
     }
     .about_para{
-        width: 80%;
-        max-width: 480px;
+        width: 100%;
+        /* max-width: 480px; */
         align-items: center;
         justify-content: center;
-        margin-left: 45px;
+        /* margin-left: 45px; */
     }
     .about_para p{
-        text-align: center;
+        text-align: justify;
     }
     .about_skills{
+        justify-content: center;
+        /* align-items: center; */
         width: 100%;
-        max-width: 480px;
+        /* max-width: 480px; */
         margin-left: -20px;
+    }
+    .about_achievements{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 80px;
+        gap: 30px;
     }
 }

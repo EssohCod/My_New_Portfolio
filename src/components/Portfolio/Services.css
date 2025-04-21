@@ -126,6 +126,16 @@
     .services_title{
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .services_title hr{
+        outline: none;
+        border: none;
+        height: 2px;
+        background: linear-gradient(264deg, #f5e642 -57.09%, #f30c0c 106.28%);
+        margin-top: 28px;
+        width: 400px;
     }
     .services_title h1{
         font-size: 30px;
