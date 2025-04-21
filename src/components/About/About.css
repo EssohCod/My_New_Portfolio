@@ -150,3 +150,44 @@
     }
 
 }
+
+
+@media (max-width: 480px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        max-width: 480px;
+    }
+    .about_sections{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about_title h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .about_title hr{
+        margin-top: 50px;
+        width: 200px;
+    }
+    .about_para{
+        width: 80%;
+        max-width: 480px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 45px;
+    }
+    .about_para p{
+        text-align: center;
+    }
+    .about_skills{
+        width: 100%;
+        max-width: 480px;
+        margin-left: -20px;
+    }
+}

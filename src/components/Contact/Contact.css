@@ -187,13 +187,78 @@
         max-width: 350px;
         text-align: center;
     }
-    .contact_right{
+    /* .contact_right{
         width: 100%;
         max-width: 350px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
+    } */
+    .contact_right input{
+        border: none;
+        width: 450px;
+        height: 58px;
+    }
+    .contact_right textarea{
+        border: none;
+        width: 430px;
+    }
+}
+
+@media (max-width: 480px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 480px;
+    }
+    .contact_title h1{
+        font-size: 30px;
+    }
+    .contact_title hr{
+        margin-top: 35px;
+        width: 320px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    .contact_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact_left{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact_left h1{
+        display: flex;
+        font-size: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+        width: 100%;
+        max-width: 350px;
+    }
+    .contact_left p{
+        font-size: 20px;
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+    .contact_details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .contact_right input{
         border: none;
@@ -203,5 +268,16 @@
     .contact_right textarea{
         border: none;
         width: 430px;
+    }
+    .contact_submit{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 10px;
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+        margin-bottom: 80px;
+        margin-top: 20px;
     }
 }

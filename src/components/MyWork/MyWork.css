@@ -80,3 +80,27 @@
         margin-left: 20px;
     }
 }
+@media (max-width: 480px){
+    .mywork{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 480px;
+    }
+    .mywork_title h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .mywork_title p{
+        width: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        align-items: center;
+        margin-left: 50px;
+    }
+    .mywork_container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}

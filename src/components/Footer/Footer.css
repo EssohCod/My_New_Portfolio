@@ -106,3 +106,16 @@
   }
 
 }
+
+@media (max-width: 480px){
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+  }
+  .footer_bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}

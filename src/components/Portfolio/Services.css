@@ -115,3 +115,28 @@
         margin-bottom: 80px;
     }
 }
+
+@media (max-width: 480px){
+    .services{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 480px;
+    }
+    .services_title{
+        align-items: center;
+        justify-content: center;
+    }
+    .services_title h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .services_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
+        gap: 20px;
+        margin-bottom: 80px;
+        margin-left: 20px;
+    }
+}
