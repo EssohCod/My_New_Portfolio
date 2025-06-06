@@ -109,7 +109,7 @@
 
 @media (max-width: 480px){
   .footer {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     max-width: 480px;

@@ -122,12 +122,7 @@
 
 @media (max-width: 480px) {
     .home{
-        /* padding: 0px 190px; */
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-        width: 100%;
-        max-width: 480px;
+        display: none;
     }
     .home img{
         width: 300px;

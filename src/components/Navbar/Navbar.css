@@ -65,7 +65,7 @@
 
 /* Tablet view (width ≤ 768px) */
 @media (max-width: 768px) {
-  .navbar_container {
+  /* .navbar_container {
     padding: 20px 30px;
   }
 
@@ -107,44 +107,13 @@
     display: block;
     width: 25px;
     cursor: pointer;
-  }
+  } */
 }
 
 /* Mobile phones (width ≤ 480px) */
 @media (max-width: 480px) {
-  .navbar_container {
-    padding: 20px 20px;
-  }
-
-  .nav_menu {
-    width: 250px;
-    padding: 60px 20px;
-  }
-
-  .nav_menu li {
-    font-size: 18px;
-    gap: 4px;
-  }
-
-  .nav_menu li img {
-    width: 40px;
-    height: 3px;
-  }
-
-  .nav_mob_close {
-    width: 20px;
-    top: 15px;
-    right: 15px;
-  }
-
-  .menu_bars {
-    width: 20px;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .logo h1 {
-    font-size: 18px;
-  }
+    .nav_links{
+        display: none;
+    }
+    
 }
