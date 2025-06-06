@@ -135,10 +135,10 @@
         height: 2px;
         background: linear-gradient(264deg, #f5e642 -57.09%, #f30c0c 106.28%);
         margin-top: 28px;
-        width: 400px;
+        width: 480px;
     }
     .services_title h1{
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 700;
     }
     .services_container{

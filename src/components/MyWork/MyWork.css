@@ -25,7 +25,7 @@
 .mywork_container img{
     box-sizing: border-box;
     width: 300px;
-    height: 260px;
+    height: auto;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -88,15 +88,12 @@
         /* max-width: 480px; */
     }
     .mywork_title h1{
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 20px;
     }
     .mywork_title p{
-        width: 100%;
         text-align: justify;
-        /* justify-content: center; */
         align-items: center;
-        /* margin-left: 50px; */
     }
     .mywork_container{
         display: flex;

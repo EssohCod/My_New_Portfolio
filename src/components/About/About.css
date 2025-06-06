@@ -119,10 +119,12 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        width: 100%;
     }
     .about_title h1{
+        display: none;
         font-size: 40px;
-        font-weight: 600;
+        font-weight: 700;
     }
     .about_title hr{
         margin-top: 50px;
@@ -131,9 +133,8 @@
     .about_left img{
         width: 350px;
         height: auto;
-        max-width: 100%;
+        /* max-width: 100%; */
         border-radius: 50px;
-        /* margin-bottom: 30px; */
     }
     .about_para{
         width: 80%;
@@ -160,7 +161,6 @@
         justify-content: center;
         gap: 50px;
         width: 100%;
-        /* max-width: 480px; */
     }
     .about_sections{
         display: flex;
@@ -168,29 +168,31 @@
         gap: 30px;
     }
     .about_title h1{
-        font-size: 20px;
+        font-size: 40px;
         font-weight: 600;
     }
     .about_title hr{
         margin-top: 50px;
-        width: 200px;
+        width: 300px;
     }
     .about_para{
-        width: 100%;
-        /* max-width: 480px; */
+        /* width: 100%; */
         align-items: center;
         justify-content: center;
-        /* margin-left: 45px; */
     }
     .about_para p{
         text-align: justify;
     }
     .about_skills{
         justify-content: center;
-        /* align-items: center; */
+        /* align-items: start; */
         width: 100%;
-        /* max-width: 480px; */
         margin-left: -20px;
+    }
+    .about_skill{
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
     }
     .about_achievements{
         display: flex;
@@ -198,5 +200,11 @@
         justify-content: space-around;
         margin-bottom: 80px;
         gap: 30px;
+    }
+    .about_achievement h1{
+        font-size: 40px;
+    }
+    .about_achievement p{
+        font-size: 18px;
     }
 }

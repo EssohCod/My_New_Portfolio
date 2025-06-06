@@ -14,11 +14,14 @@ const Home = () => {
       
         <div className="hero_action">
             <div className="home_connect">
-                <AnchorLink className='anchor-link' offset={50} href='#contact'>
-                    <button>Connect With Me</button>
-                </AnchorLink></div>
+              <AnchorLink className='anchor-link' offset={50} href='#contact'>
+                  <button>Connect With Me</button>
+              </AnchorLink>
+            </div>
             <div className="home_resume">
+              <a href="/Nsikan_Essoh_Resume.pdf" download>
                 <button>My Resume</button>
+              </a>
             </div>
         </div>
     </div>
