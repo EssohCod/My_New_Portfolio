@@ -8,7 +8,7 @@ const Home = () => {
     <div id='home' className='home'>
       <img src={profileImg} alt="Essoh" />
       
-        <h1><span>I'm Nsikan Essoh,</span><br /> Software Developer based in Nigeria.</h1>
+        <h1><span>I'm Nsikan Essoh,</span> Software Developer based in Nigeria.</h1>
         <p>3+ years of experience building scalable web applications and leading development teams. Seeking to bring my expertise in Mobile App Development, responsive web application, cloud technologies, and eCommerce platforms like Shopify to organizations looking to drive innovative SaaS solutions and optimize development processes.
         </p>
       

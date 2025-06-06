@@ -9,8 +9,9 @@
     justify-content: center;
 }
 .home img{
-    width: 450px;
+    width: 360px;
     height: auto;
+    border-radius: 160px;
     margin-top: 140px;
 }
 .home h1{
@@ -20,13 +21,6 @@
     line-height: 65px;
     color: #DCDCDC;
 }
-/* .home h1 span{
-    background: linear-gradient(270deg, #F8F8FF 15%, #B0BEC5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: #000;
-} */
 .home p{
     /* width: 85%; */
     text-align: center;
@@ -86,72 +80,32 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .home{
-        align-items: center;
-        justify-content: center;
-    }
-    .home img{
-        width: 350px;
-    }
-    .home h1{
-        text-align: center;
-        font-size:32px;
-        font-weight: 800;
-        line-height: 35px;
-        color: #B0BEC5;
-        width: 90%;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-    .home p{
-        width: 90%;
-        text-align: justify;
-    }
-    .hero_action{
-        display: flex;
-        /* flex-direction: column; */
-        align-items: center;
-        gap: 25px;
-        font-weight: 500;
-        margin-bottom: 50px;
-        color: #DCDCDC;
-        font-family: "Outfit", sans-serif;
-    }
+    
 }
 
 @media (max-width: 480px) {
     .home{
-        display: none;
+        display: flex;
+        padding: 0px 0px;
+        width: 90%;
+        margin: 0 auto;
     }
     .home img{
-        width: 300px;
+        width: 200px;
         height: auto;
-
-        align-items: center;
     }
     .home h1{
-        font-size: 38px;
-        font-weight: 700;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 46px;
     }
     .home p{
-        text-align: justify;
+        margin-top: -18px;
     }
     .hero_action{
         display: flex;
-        /* flex-direction: column; */
-        margin-bottom: 100px;
+        flex-direction: column;
     }
-    .home_connect button{
-        width: 180px;
-        height: 50px;
-        font-size: 18px;
+    .hero_action button{
+        width: 220px;
     }
-    .home_resume button{
-        width: 160px;
-        height: 50px;
-        font-size: 20px;
-    }
-    
 }
