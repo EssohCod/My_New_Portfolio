@@ -40,7 +40,6 @@
     flex-direction: column;
     gap: 20px;
     font-size: 20px;
-
 }
 .about_para p{
     text-align: justify;
@@ -115,39 +114,11 @@
 
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .about_sections{
+    .about{
         display: flex;
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-    }
-    .about_title h1{
-        display: none;
-        font-size: 40px;
-        font-weight: 700;
-    }
-    .about_title hr{
-        margin-top: 50px;
-        width: 250px;
-    }
-    .about_left img{
-        width: 350px;
-        height: auto;
-        /* max-width: 100%; */
-        border-radius: 50px;
-    }
-    .about_para{
-        width: 80%;
-        max-width: 90%;
-        align-items: center;
-        justify-content: center;
-        margin-left: 45px;
-    }
-    .about_skills{
-        margin-left: -40px;
-    }
-    .about_achievements{
-        margin-left: -10px;
+        padding: 0px 0px;
+        width: 90%;
+        margin: 0 auto;
     }
 
 }
@@ -155,56 +126,33 @@
 
 @media (max-width: 480px){
     .about{
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        width: 100%;
+        display: flex;
+        padding: 0px 0px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about_title h1{
+        font-size: 30px;
+        margin: 0 auto;
+    }
+    .about_title hr{
+        width: 170px;
+        margin: 0 auto;
     }
     .about_sections{
         display: flex;
         flex-direction: column;
-        gap: 30px;
-    }
-    .about_title h1{
-        font-size: 40px;
-        font-weight: 600;
-    }
-    .about_title hr{
-        margin-top: 50px;
-        width: 300px;
-    }
-    .about_para{
-        /* width: 100%; */
-        align-items: center;
-        justify-content: center;
     }
     .about_para p{
-        text-align: justify;
+        text-align: center;
+        margin-top: -44px;
+        line-height: 30px;
+        font-size: 22px;
     }
     .about_skills{
-        justify-content: center;
-        /* align-items: start; */
-        width: 100%;
-        margin-left: -20px;
-    }
-    .about_skill{
-        justify-content: start;
-        align-items: start;
-        gap: 20px;
-    }
-    .about_achievements{
         display: flex;
-        width: 100%;
-        justify-content: space-around;
-        margin-bottom: 80px;
-        gap: 30px;
-    }
-    .about_achievement h1{
-        font-size: 40px;
-    }
-    .about_achievement p{
-        font-size: 18px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: end;
     }
 }
