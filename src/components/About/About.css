@@ -120,6 +120,38 @@
         width: 90%;
         margin: 0 auto;
     }
+    .about_title h1{
+        font-size: 50px;
+        margin: 0 auto;
+    }
+    .about_title hr{
+        width: 240px;
+        margin: 0 auto;
+    }
+    .about_sections{
+        display: flex;
+        gap: 10px;
+    }
+        .about_skills{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: end;
+    }
+        .about_para p{
+        text-align: start;
+        line-height: 32px;
+        font-size: 24px;
+    }
+    .about_skills{
+        margin-left: -26px;
+    }
+    .about_skill{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        transition: 0.3s;
+    }
 
 }
 
@@ -150,9 +182,13 @@
         font-size: 22px;
     }
     .about_skills{
-        display: flex;
-        flex-direction: column;
         gap: 15px;
-        text-align: end;
+        margin-left: -28px;
+    }
+    .about_skill{
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        transition: 0.3s;
     }
 }
