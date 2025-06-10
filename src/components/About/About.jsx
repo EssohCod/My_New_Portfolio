@@ -7,7 +7,7 @@ const About = () => {
     <div id='about' className='about'>
       <div className="about_title">
         <h1>About Me</h1>
-        <hr />
+        {/* <hr /> */}
       </div>
 
       <div className="about_sections">
@@ -27,6 +27,7 @@ const About = () => {
                 <div className="about_skill"><p>Node JS</p> <hr style = {{width: "55%"}} /></div>
                 <div className="about_skill"><p>Ruby on Rails</p> <hr style = {{width: "60%"}} /></div>
                 <div className="about_skill"><p>MongoDB</p> <hr style = {{width: "45%"}} /></div>
+                <div className="about_skill"><p>Shopify</p> <hr style = {{width: "75%"}} /></div>
                 <div className="about_skill"><p>Git</p> <hr style = {{width: "75%"}} /></div>
                 
             </div>

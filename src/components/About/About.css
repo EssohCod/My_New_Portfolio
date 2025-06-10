@@ -122,11 +122,8 @@
     }
     .about_title h1{
         font-size: 50px;
-        margin: 0 auto;
-    }
-    .about_title hr{
-        width: 240px;
-        margin: 0 auto;
+        font-weight: 900;
+        margin-top: 60px;
     }
     .about_sections{
         display: flex;
@@ -162,14 +159,12 @@
         padding: 0px 0px;
         width: 90%;
         margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
     .about_title h1{
         font-size: 30px;
-        margin: 0 auto;
-    }
-    .about_title hr{
-        width: 170px;
-        margin: 0 auto;
+        margin-bottom: 20px;
     }
     .about_sections{
         display: flex;
@@ -183,12 +178,18 @@
     }
     .about_skills{
         gap: 15px;
-        margin-left: -28px;
+        margin-left: -38px;
     }
     .about_skill{
         display: flex;
         gap: 18px;
         align-items: center;
         transition: 0.3s;
+    }
+    .about_achievement h1{
+        font-size: 38px;
+    }
+    .about_achievement p{
+        font-size: 20px;
     }
 }

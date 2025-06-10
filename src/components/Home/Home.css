@@ -100,8 +100,8 @@
         height: auto;
     }
     .home h1{
-        font-size: 36px;
-        line-height: 46px;
+        font-size: 30px;
+        line-height: 40px;
     }
     .home p{
         margin-top: -18px;
@@ -109,6 +109,9 @@
     .hero_action{
         display: flex;
         flex-direction: column;
+    }
+    .hero_action{
+        margin-bottom: 100px;
     }
     .hero_action button{
         width: 220px;

@@ -6,9 +6,6 @@
     gap: 80px;
     margin: 80px 170px;
 }
-/* .contact_title{
-    position: relative;
-} */
 .contact_title h1{
     padding: 0px 30px;
     font-size: 70px;
@@ -187,14 +184,6 @@
         max-width: 350px;
         text-align: center;
     }
-    /* .contact_right{
-        width: 100%;
-        max-width: 350px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    } */
     .contact_right input{
         border: none;
         width: 450px;
@@ -208,74 +197,58 @@
 
 @media (max-width: 480px){
     .contact{
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        max-width: 480px;
+        display: flex;
+        margin: 0 auto;
+        padding: 0px 0px;
+        width: 90%;
     }
     .contact_title h1{
-        font-size: 40px;
+        font-size: 48px;
+        font-weight: 900;
+        letter-spacing: 2px;
     }
     .contact_title hr{
-        margin-top: 30px;
-        width: 300px;
-        align-items: center;
-        justify-content: center;
-        /* margin-left: 20px; */
+        width: 360px;
     }
     .contact_section{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
     .contact_left{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding: 0px 10px;
-        align-items: center;
-        justify-content: center;
+        margin-top: -50px;
     }
     .contact_left h1{
-        display: flex;
-        font-size: 50px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-top: -50px;
-        width: 100%;
+        font-size: 48px;
+        letter-spacing: 2px;
     }
-    .contact_left p{
-        font-size: 20px;
-        display: flex;
-        width: 100%;
+    .contact_left p,
+    .contact_left h1{
         text-align: center;
     }
-    .contact_details{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .contact_detail{
+        margin: 0px auto;
     }
     .contact_right input{
-        border: none;
-        width: 450px;
-        height: 58px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 19px;
     }
     .contact_right textarea{
-        border: none;
-        width: 430px;
+        width: 100%;
+        max-width: 280px;
+        font-size: 19px;
     }
     .contact_submit{
+        width: 180px;
+        margin: 0px auto;
+        margin-bottom: 30px;
+    }
+    .contact_right{
+        margin: 0 auto;
+        margin-top: -20px;
         display: flex;
-        align-items: center;
-        justify-content: center; 
-        gap: 10px;
-        width: 140px;
-        height: 50px;
-        font-size: 16px;
-        margin-bottom: 80px;
-        margin-top: 20px;
+        flex-direction: column;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 }

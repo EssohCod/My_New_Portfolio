@@ -8,7 +8,8 @@ const Portfolio = () => {
     <div id='services' className='services'>
       <div className="services_title">
         <h1>What I Can Do For You</h1>
-        <hr />
+        <p>I offer modern web, mobile, and IoT solutions, blending UI/UX design, API integration, AI features, and secure databases to build powerful, scalable, and user-centric digital products.</p>
+        {/* <hr /> */}
         {/* <img src="" alt="" /> */}
       </div>
 
