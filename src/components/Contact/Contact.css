@@ -18,7 +18,7 @@
     height: 2px;
     background: linear-gradient(264deg, #f5e642 -57.09%, #f30c0c 106.28%);
     margin-top: 25px;
-    width: 550px;
+    width: 450px;
 }
 .contact_section{
     display: flex;
@@ -110,7 +110,7 @@
     cursor: pointer;
     transition: 0.4s all;
     background: transparent;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
     margin-top: 20px;
 }
 .contact_submit:hover{

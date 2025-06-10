@@ -50,17 +50,11 @@
 .services_format h2{
     font-size: 28px;
     font-weight: 800;
-    /* background: linear-gradient(270deg, #f5e642 20%, #f30c0c 100%); */
-    /* background-clip: text; */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
 }
 .services_format p{
     color: #d4d4d4;
     font-size: 18px;
-    /* max-width: 200px; */
     text-align: center;
-    /* line-height: 40px; */
 }
 .services_readmore{
     display: flex;
@@ -85,19 +79,18 @@
     transition: 0.4s all;
     background: linear-gradient(198deg, #f5e642 0%, #f30c0c 100.33%);
 }
+.services_readmore button:hover{
+    transform: scaleX(1.1);
+}
 .services_readmore img{
     width: 14px;
     background: transparent;
 }
 .services_format:hover{
     border: 2px solid #f3a20c;
-    /* background-image: linear-gradient(45deg, #3f0028, #582300); */
-    transform: scale(1.05);
     transition: 0.4s;
 }
-.services_readmore button:hover{
-    transform: scaleX(1.01);
-}
+
 
 
 
@@ -111,7 +104,7 @@
     .services_title h1{
         font-size: 48px;
         font-weight: 900;
-        margin-bottom: 10px;
+        /* margin-bottom: 20px; */
     }
     .services_title p{
         font-size: 20px;
@@ -139,9 +132,10 @@
     .services_title{
         display: flex;
         flex-direction: column;
+        gap: 30px;
     }
     .services_title h1{
-        font-size: 38px;
+        font-size: 36px;
         font-weight: 900;
     }
     .services_container{

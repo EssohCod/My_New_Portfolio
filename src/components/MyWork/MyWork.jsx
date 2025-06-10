@@ -19,11 +19,14 @@ const MyWork = () => {
       </div>
 
       <div className="show_more_btn">
-        <button>
+        <a href="https://github.com/essohcod" target="_blank" rel="noopener noreferrer">
+          <button>
             Show More
             <img src={Arrow} alt="" />
-        </button>
+          </button>
+        </a>
       </div>
+
     </div>
   )
 }

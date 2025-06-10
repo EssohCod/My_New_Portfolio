@@ -111,7 +111,7 @@
         flex-direction: column;
     }
     .hero_action{
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
     }
     .hero_action button{
         width: 220px;

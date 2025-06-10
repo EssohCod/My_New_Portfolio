@@ -23,18 +23,24 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+  const sectionIds = ["home", "about", "work", "services", "contact"];
+
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50);
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sectionIds[i]);
+        if (section && scrollPosition >= section.offsetTop) {
+          setMenu(sectionIds[i]);
+          break;
+        }
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
