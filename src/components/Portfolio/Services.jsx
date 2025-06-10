@@ -9,8 +9,6 @@ const Portfolio = () => {
       <div className="services_title">
         <h1>What I Can Do For You</h1>
         <p>I offer modern web, mobile, and IoT solutions, blending UI/UX design, API integration, AI features, and secure databases to build powerful, scalable, and user-centric digital products.</p>
-        {/* <hr /> */}
-        {/* <img src="" alt="" /> */}
       </div>
 
       <div className="services_container">
@@ -20,9 +18,12 @@ const Portfolio = () => {
             <h2>{service.s_name}</h2>
             <p>{service.s_desc}</p>
             <div className="services_readmore">
-                <button>Read More
-                    <img src={Arrow} alt="Arrow" />
+              <a href="https://github.com/essohcod" target="_blank" rel="noopener noreferrer">
+                <button>
+                  Read More
+                  <img src={Arrow} alt="Arrow" />
                 </button>
+              </a>
             </div>
           </div>
         })}
