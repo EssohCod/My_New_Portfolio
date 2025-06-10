@@ -113,7 +113,7 @@
 
 
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 768px){
     .about{
         display: flex;
         padding: 0px 0px;
@@ -127,25 +127,25 @@
     }
     .about_sections{
         display: flex;
-        gap: 10px;
+        gap: 20px;
     }
         .about_skills{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         text-align: end;
     }
         .about_para p{
         text-align: start;
         line-height: 32px;
-        font-size: 24px;
+        font-size: 20px;
     }
     .about_skills{
-        margin-left: -26px;
+        margin-left: -10px;
     }
     .about_skill{
         display: flex;
-        gap: 10px;
+        gap: 15px;
         align-items: center;
         transition: 0.3s;
     }

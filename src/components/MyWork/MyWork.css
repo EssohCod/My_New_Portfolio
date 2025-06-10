@@ -63,7 +63,7 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (max-width: 768px) {
     .mywork{
         display: flex;
         margin: 0px auto;
