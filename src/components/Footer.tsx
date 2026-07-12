@@ -39,7 +39,7 @@ function Footer() {
 
         <div className="flex flex-col gap-4 sm:flex-row lg:shrink-0">
           <a
-            href="projects"
+            href="/projects"
             className="inline-flex items-center justify-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-black text-[#123fc2] shadow-[0_18px_34px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 hover:bg-[#eef4ff]"
           >
             View My Projects

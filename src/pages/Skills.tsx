@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { ReactElement } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -208,17 +209,19 @@ const atAGlance = [
 ] satisfies Array<[string, string, IconName]>
 
 const faqs = [
-  'What technologies do you specialize in?',
-  'Do you work across the full stack?',
-  'Can you learn new technologies for a project?',
-  'Do you build both web and mobile applications?',
-  'What databases do you commonly use?',
-  'Do you provide UI implementation from Figma?',
-  'Can you integrate AI into existing software?',
-  'Which cloud platforms have you worked with?',
-]
+  ['What technologies do you specialize in?', 'I specialize in React, Next.js, TypeScript, Node.js, React Native, PostgreSQL, MongoDB, cloud platforms, and modern AI integrations.'],
+  ['Do you work across the full stack?', 'Yes. I build complete products across frontend interfaces, backend APIs, databases, authentication, deployment, and ongoing maintenance.'],
+  ['Can you learn new technologies for a project?', 'Yes. I evaluate project requirements first and can adopt well-supported technologies when they are the best fit for the product.'],
+  ['Do you build both web and mobile applications?', 'Yes. I build responsive web products and cross-platform mobile applications for Android and iOS.'],
+  ['What databases do you commonly use?', 'I commonly work with PostgreSQL, MongoDB, MySQL, and Firebase, selecting the database around the product requirements.'],
+  ['Do you provide UI implementation from Figma?', 'Yes. I translate Figma designs into responsive, accessible, and reusable production interfaces.'],
+  ['Can you integrate AI into existing software?', 'Yes. I can add assistants, intelligent search, recommendations, automation, and other focused AI workflows.'],
+  ['Which cloud platforms have you worked with?', 'My deployment and cloud experience includes AWS, Vercel, Netlify, Docker-based environments, and related CI/CD tooling.'],
+] satisfies Array<[string, string]>
 
 function Skills() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
   return (
     <main className="min-h-screen overflow-hidden bg-white text-slate-950">
       <Navbar />
@@ -383,12 +386,18 @@ function Skills() {
         <div className="mx-auto max-w-[1540px]">
           <h2 className="text-2xl text-center font-bold tracking-[-0.035em]">Skills & Expertise FAQs</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {faqs.map((faq) => (
-              <button key={faq} type="button" className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-5 py-4 text-left text-sm font-bold text-slate-900 shadow-[0_10px_24px_rgba(15,23,42,0.03)]">
-                {faq}
-                <span className="text-lg text-[#1557ff]" aria-hidden="true">+</span>
-              </button>
-            ))}
+            {faqs.map(([question, answer], index) => {
+              const isOpen = openFaq === index
+              return (
+                <div key={question} className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_10px_24px_rgba(15,23,42,0.03)]">
+                  <button type="button" onClick={() => setOpenFaq(isOpen ? null : index)} aria-expanded={isOpen} className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-slate-900">
+                    {question}
+                    <span className={`text-lg text-[#1557ff] transition ${isOpen ? 'rotate-45' : ''}`} aria-hidden="true">+</span>
+                  </button>
+                  {isOpen && <p className="border-t border-slate-100 px-5 py-4 text-sm font-medium leading-7 text-slate-600">{answer}</p>}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

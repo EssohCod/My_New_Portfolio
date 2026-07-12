@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import heroImage from '../assets/hero-img.png'
+import myCv from '../assets/my-cv.pdf'
 
 type IconName =
   | 'briefcase'
@@ -236,7 +237,7 @@ function Experience() {
             <a href="/projects" className="inline-flex items-center justify-center gap-3 rounded-md bg-[#1557ff] px-7 py-4 text-sm font-black text-white shadow-[0_14px_28px_rgba(21,87,255,0.24)]">
               View My Projects <span aria-hidden="true">↗</span>
             </a>
-            <a href="/cv.pdf" className="inline-flex items-center justify-center gap-3 rounded-md border border-[#1557ff] bg-white px-7 py-4 text-sm font-black text-[#1557ff]">
+            <a href={myCv} download="Nsikan-Essoh-CV.pdf" className="inline-flex items-center justify-center gap-3 rounded-md border border-[#1557ff] bg-white px-7 py-4 text-sm font-black text-[#1557ff]">
               Download CV <Icon name="download" className="h-4 w-4" />
             </a>
           </div>

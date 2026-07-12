@@ -301,7 +301,7 @@ function Home() {
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              href="projects"
+              href="/projects"
               className="inline-flex items-center justify-center gap-3 rounded-md bg-[#1557ff] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(21,87,255,0.24)] transition hover:-translate-y-0.5 hover:bg-[#0f46d8]"
             >
               View My Projects

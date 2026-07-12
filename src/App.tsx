@@ -17,9 +17,55 @@ function App() {
 
   useEffect(() => {
     const handleRouteChange = () => setCurrentPage(getCurrentPage())
+    const handleDocumentClick = (event: MouseEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        !(event.target instanceof Element)
+      ) {
+        return
+      }
+
+      const anchor = event.target.closest('a')
+      const href = anchor?.getAttribute('href')
+
+      if (
+        !anchor ||
+        !href ||
+        href.startsWith('#') ||
+        anchor.hasAttribute('download') ||
+        (anchor.target && anchor.target !== '_self')
+      ) {
+        return
+      }
+
+      const destination = new URL(anchor.href, window.location.href)
+      if (destination.origin !== window.location.origin) return
+
+      event.preventDefault()
+      window.history.pushState({}, '', `${destination.pathname}${destination.search}${destination.hash}`)
+      handleRouteChange()
+
+      if (destination.hash) {
+        window.requestAnimationFrame(() => {
+          document.querySelector(destination.hash)?.scrollIntoView({ behavior: 'smooth' })
+        })
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
 
     window.addEventListener('popstate', handleRouteChange)
-    return () => window.removeEventListener('popstate', handleRouteChange)
+    document.addEventListener('click', handleDocumentClick)
+
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange)
+      document.removeEventListener('click', handleDocumentClick)
+    }
   }, [])
 
   if (currentPage === 'about') {

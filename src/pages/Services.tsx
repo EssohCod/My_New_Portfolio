@@ -170,19 +170,6 @@ const trust = [
 //   ['Long-Term Partnership', 'Continuous development, maintenance, feature enhancements, and technical support.', 'heart'],
 // ] satisfies Array<[string, string, IconName]>
 
-// const faqs = [
-//   'What types of software do you build?',
-//   'Can you work with an existing development team?',
-//   'Do you work with startups and enterprise businesses?',
-//   'Do you sign NDAs?',
-//   'Can you build both web and mobile applications?',
-//   'Can you help improve an existing application?',
-//   'How long does a typical project take?',
-//   'Do you provide UI implementation from Figma designs?',
-//   'Do you offer post-launch support?',
-//   'Can you integrate AI into existing software?',
-// ]
-
 // const testimonials = [
 //   ['Nsikan delivered beyond our expectations. He understood our requirements perfectly and built a scalable solution that improved our operations significantly.', 'David Olaro', 'CTO, PayFlow'],
 //   ['Highly professional, excellent communication, and very skilled engineer. He transformed our ideas into a fantastic product.', 'Sarah Johnson', 'Product Manager, Learnova'],
@@ -338,12 +325,18 @@ function Services() {
           <div>
             <h2 className="text-xl text-center font-bold uppercase tracking-[-0.02em]">Service FAQs</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
-              {faqs.map((faq) => (
-                <button key={faq} type="button" className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-5 py-4 text-left text-sm font-black text-slate-900 shadow-[0_10px_24px_rgba(15,23,42,0.03)]">
-                  {faq}
-                  <span className="text-lg text-[#1557ff]" aria-hidden="true">+</span>
-                </button>
-              ))}
+              {faqs.map(([question, answer], index) => {
+                const isOpen = openFaq === index
+                return (
+                  <div key={question} className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_10px_24px_rgba(15,23,42,0.03)]">
+                    <button type="button" onClick={() => setOpenFaq(isOpen ? null : index)} aria-expanded={isOpen} className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-black text-slate-900">
+                      {question}
+                      <span className={`text-lg text-[#1557ff] transition ${isOpen ? 'rotate-45' : ''}`} aria-hidden="true">+</span>
+                    </button>
+                    {isOpen && <p className="border-t border-slate-100 px-5 py-4 text-sm font-medium leading-7 text-slate-600">{answer}</p>}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
