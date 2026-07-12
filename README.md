@@ -1,69 +1,75 @@
-# Nsikan Essoh - Developer Portfolio Website
+# React + TypeScript + Vite
 
-Welcome to my personal portfolio website, where I showcase my skills, projects, and services as a developer. This site is built using modern web technologies and provides potential clients and employers a professional and elegant look into what I do.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- 🔥 Built with React and Vite for blazing-fast performance
-- 🎨 Beautiful, responsive UI with clean and accessible design
-- 🧩 Modular components for reusability and maintainability
-- 📃 Dedicated **Terms of Service** and **Privacy Policy** pages
-- 📬 Contact form for direct outreach
-- 🖼️ Project and service showcase grid
-- 🌙 Smooth navigation and user experience
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📂 Project Structure
+## React Compiler
 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-src/ ├── assets/ # Images and icons ├── components/ │ ├── About/ # About section │ ├── Contact/ # Contact form and details │ ├── Footer/ # Footer with legal links │ ├── Home/ # Hero/Home section │ ├── MyWork/ # Portfolio/Work showcase │ ├── Navbar/ # Navigation bar │ ├── Portfolio/ # Services offered │ ├── TermsOfService.jsx # Terms of Service page │ └── PrivacyPolicy.jsx # Privacy Policy page ├── App.jsx # Main app component with routing ├── main.jsx # App entry point ├── index.css # Global styles └── App.css # Component-specific styles
+## Expanding the ESLint configuration
 
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🧱 Built With
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [React Router DOM](https://reactrouter.com/en/main)
-- CSS3 (with custom styling)
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## 🔧 Installation & Setup
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-   cd portfolio-website
+```
 
-Install dependencies
-    npm install
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Start the development server
-    npm run dev
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-Open in your browser:
-    http://localhost:5173
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-
-Deployment
-    Netlify and GitHub Pages
-
-To build for production:
-npm run build
-
-🔗 Links
-    Terms of Service
-    Privacy Policy
-
-🙋‍♂️ Author
-Nsikan Essoh
-Software Developer
-LinkedIn | Twitter | Email
-
-📃 License
-This project is open source and available under the MIT License.
-
----
-
-### 📝 Optional Customizations:
-- Replace `your-username`, `your-profile`, and contact links with your actual profiles.
-- Add screenshots of your site in a `screenshots/` folder and embed them in the README for extra flair.
-
-Let me know if you want a version with embedded images, Vercel/Netlify deploy buttons, or internationalization support!
+```
