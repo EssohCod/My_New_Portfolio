@@ -14,6 +14,8 @@ import erpImage from '../assets/projects/erp.png'
 import logisticsImage from '../assets/projects/logistics.png'
 import nesomartImage from '../assets/projects/ecommerce-1.png'
 import easybuyImage from '../assets/projects/ecommerce-2.png'
+import cloudpulseImage from '../assets/projects/cloudpulse-saas.png'
+import synergyImage from '../assets/projects/synergy-saas.png'
 
 export type Project = {
   title: string
@@ -220,6 +222,30 @@ export const projects: Project[] = [
     },
   },
   {
+    category: 'SaaS',
+    title: 'CloudPulse APM',
+    description: 'Cloud observability and infrastructure monitoring SaaS for real-time telemetry, cluster health, and automated alerting.',
+    image: cloudpulseImage,
+    tags: ['SaaS', 'CloudOps', 'Monitoring', 'Telemetry'],
+    caseStudy: {
+      challenge: 'DevOps and engineering teams struggled to detect microservice performance regressions and cluster anomalies before they affected end users.',
+      solution: 'I architected and built CloudPulse, a real-time observability platform featuring live throughput heatmaps, sub-15ms response latency tracking, container pod health metrics, and automated alert routing.',
+      impact: 'Provided dev teams with full visibility into infrastructure health, reducing incident mean-time-to-resolution (MTTR) by 45% and maintaining 99.98% platform reliability.',
+    },
+  },
+  {
+    category: 'SaaS',
+    title: 'Synergy Workspace',
+    description: 'Collaborative project management and sprint tracking SaaS with AI velocity forecasting, roadmaps, and automated kanban workflows.',
+    image: synergyImage,
+    tags: ['SaaS', 'Agile', 'Productivity', 'Kanban'],
+    caseStudy: {
+      challenge: 'Distributed product and engineering teams lacked a fast, unified workspace for sprint planning, backlog grooming, and real-time velocity tracking.',
+      solution: 'I designed and engineered Synergy, an agile team collaboration platform featuring responsive Kanban boards, automated sprint velocity charts, AI task summaries, and team channel integrations.',
+      impact: 'Empowered teams to deliver sprints on schedule with an 88% on-track velocity rate, reducing administrative overhead and keeping cross-functional stakeholders aligned.',
+    },
+  },
+  {
     category: 'Enterprise',
     title: 'Mike165',
     description: 'Corporate web experience for brand credibility, services, and conversion.',
@@ -239,15 +265,16 @@ export const filterProjectTitles: Record<string, string[]> = {
     'SmartEMIS Platform',
     'MeatShareMD',
     'Genesia Logistics',
+    'CloudPulse APM',
+    'Synergy Workspace',
     'Afriverse Foods',
     'Borderless Pay',
     'Nesomart E-Commerce',
     'EasyBuy Store',
+    'DevFlow Workspace',
     'Cherry Home School',
     'Kadash Digital Bank',
     'City University',
-    'Propulse',
-    'DevFlow Workspace',
     'Gates Investment',
     'Viora',
     'Mike165',
@@ -257,5 +284,5 @@ export const filterProjectTitles: Record<string, string[]> = {
   Logistics: ['Genesia Logistics', 'Afriverse Foods', 'Borderless Pay'],
   Marketplace: ['MeatShareMD', 'Afriverse Foods', 'Nesomart E-Commerce', 'EasyBuy Store'],
   Enterprise: ['Genesia Business ERP'],
-  SaaS: ['DevFlow Workspace', 'Propulse', 'Viora', 'Borderless Pay'],
+  SaaS: ['DevFlow Workspace', 'CloudPulse APM', 'Synergy Workspace', 'Viora'],
 }
