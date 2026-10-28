@@ -422,17 +422,17 @@ function Home() {
             {visibleProjects.map((project) => (
               <article
                 key={`${activeFilter}-${project.title}`}
-                className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)]"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#1557ff]/30 hover:shadow-[0_22px_45px_rgba(21,87,255,0.12)]"
               >
-                <div className="m-4 overflow-hidden rounded-lg bg-[#eef4ff]">
+                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                   <img
                     src={project.image}
                     alt={`${project.title} project preview`}
-                    className="h-52 w-full object-cover object-top transition duration-500 hover:scale-105"
+                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                   />
                 </div>
 
-                <div className="px-6 pb-7">
+                <div className="flex flex-1 flex-col p-6">
                   <div className="mb-4 flex flex-wrap gap-2">
                     <span className="rounded-md bg-[#eef4ff] px-3 py-1 text-xs font-semibold text-[#1557ff]">
                       {project.category}
@@ -444,13 +444,13 @@ function Home() {
                     ))}
                   </div>
                   <h3 className="text-xl font-bold text-slate-950">{project.title}</h3>
-                  <p className="mt-3 min-h-[48px] text-sm font-medium leading-6 text-slate-600">
+                  <p className="mt-3 flex-1 text-sm font-medium leading-6 text-slate-600">
                     {project.description}
                   </p>
                   <button
                     type="button"
                     onClick={() => setSelectedProject(project)}
-                    className="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-[#1557ff]"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#1557ff] transition hover:text-[#0f46d8]"
                   >
                     View Case Study
                     <span aria-hidden="true">-&gt;</span>

@@ -131,10 +131,10 @@ const processSteps = [
 ] satisfies Array<[string, string, IconName]>
 
 const passionProjects = [
-  projects.find((project) => project.title === 'Kona'),
-  projects.find((project) => project.title === 'Viora'),
-  projects.find((project) => project.title === 'ScoutNaija'),
-  projects.find((project) => project.title === 'Afriverse Foods'),
+  projects.find((project) => project.title === 'MeatShareMD'),
+  projects.find((project) => project.title === 'Genesia Business ERP'),
+  projects.find((project) => project.title === 'SmartEMIS Platform'),
+  projects.find((project) => project.title === 'Genesia Logistics'),
 ].filter((project): project is Project => Boolean(project))
 
 const testimonials = [
