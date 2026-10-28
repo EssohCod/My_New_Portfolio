@@ -424,11 +424,11 @@ function Home() {
                 key={`${activeFilter}-${project.title}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#1557ff]/30 hover:shadow-[0_22px_45px_rgba(21,87,255,0.12)]"
               >
-                <div className="relative h-56 w-full overflow-hidden bg-slate-100">
+                <div className="relative flex h-52 sm:h-56 w-full items-center justify-center overflow-hidden border-b border-slate-100 bg-[#f8fafc] p-2.5">
                   <img
                     src={project.image}
                     alt={`${project.title} project preview`}
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                    className="h-full w-full rounded-lg object-contain object-center shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
 
@@ -544,11 +544,11 @@ function Home() {
       {selectedProject && (
         <div className="fixed inset-0 z-[80] overflow-y-auto bg-slate-950/70 p-4 backdrop-blur-sm">
           <div className="mx-auto my-8 max-w-4xl overflow-hidden rounded-2xl bg-white shadow-[0_30px_90px_rgba(0,0,0,0.25)]">
-            <div className="relative">
+            <div className="relative flex items-center justify-center bg-slate-950 p-4 sm:p-6">
               <img
                 src={selectedProject.image}
                 alt={`${selectedProject.title} case study`}
-                className="h-72 w-full object-cover object-top"
+                className="max-h-[420px] w-full rounded-lg object-contain object-center"
               />
               <button
                 type="button"

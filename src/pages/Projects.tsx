@@ -355,9 +355,9 @@ function Projects() {
             <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filteredProjects.map((project) => (
                 <article key={`${activeFilter}-${project.title}`} className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_15px_38px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#1557ff]/35 hover:shadow-[0_24px_55px_rgba(15,23,42,0.1)]">
-                  <button type="button" onClick={() => setSelectedProject(project)} className="relative block overflow-hidden bg-[#edf3ff] text-left">
-                    <img src={project.image} alt={`${project.title} project preview`} className="h-48 w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]" />
-                    <span className="absolute left-3 top-3 rounded-md bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#1557ff] shadow-sm">{project.category}</span>
+                  <button type="button" onClick={() => setSelectedProject(project)} className="relative flex h-52 sm:h-56 w-full items-center justify-center overflow-hidden border-b border-slate-100 bg-[#f8fafc] p-2.5 text-left">
+                    <img src={project.image} alt={`${project.title} project preview`} className="h-full w-full rounded-lg object-contain object-center shadow-[0_2px_8px_rgba(15,23,42,0.04)] transition duration-500 group-hover:scale-[1.03]" />
+                    <span className="absolute left-4 top-4 rounded-md bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#1557ff] shadow-sm">{project.category}</span>
                   </button>
                   <div className="flex flex-1 flex-col p-5">
                     <h4 className="text-lg font-bold tracking-[-0.025em] text-slate-950">{project.title}</h4>
@@ -572,8 +572,8 @@ function Projects() {
       {selectedProject && (
         <div className="fixed inset-0 z-[100] overflow-y-auto bg-slate-950/75 p-4 backdrop-blur-md print:hidden" role="presentation" onMouseDown={() => setSelectedProject(null)}>
           <div className="mx-auto my-6 max-w-5xl overflow-hidden rounded-2xl bg-white shadow-[0_34px_100px_rgba(0,0,0,0.3)]" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title" onMouseDown={(event) => event.stopPropagation()}>
-            <div className="relative bg-[#edf3ff]">
-              <img src={selectedProject.image} alt={`${selectedProject.title} case study preview`} className="max-h-[440px] w-full object-cover object-top" />
+            <div className="relative flex items-center justify-center bg-slate-950 p-4 sm:p-6">
+              <img src={selectedProject.image} alt={`${selectedProject.title} case study preview`} className="max-h-[460px] w-full rounded-lg object-contain object-center" />
               <button type="button" onClick={() => setSelectedProject(null)} className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-white text-slate-950 shadow-[0_12px_28px_rgba(15,23,42,0.18)] transition hover:scale-105" aria-label="Close project case study"><Icon name="close" className="h-5 w-5" /></button>
             </div>
             <div className="p-6 sm:p-9">
