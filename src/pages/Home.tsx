@@ -2,16 +2,8 @@ import { useMemo, useState } from 'react'
 import type { ReactElement } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import aboutImage from '../assets/about-img.png'
 import heroImage from '../assets/hero-img.png'
 import myCv from '../assets/my-cv.pdf'
-import edvesLogo from '../assets/logos/edves.png'
-import gigLogo from '../assets/logos/giglogistics.png'
-import healthtrackaLogo from '../assets/logos/healthtracka.png'
-import interswitchLogo from '../assets/logos/interswitch.png'
-import kudaLogo from '../assets/logos/kuda.png'
-import paystackLogo from '../assets/logos/paystack.png'
-import ulessonLogo from '../assets/logos/ulesson.png'
 import { filterProjectTitles, projectFilters, projects } from '../data/projects'
 import type { Project } from '../data/projects'
 
@@ -123,15 +115,6 @@ const stats = [
   { value: '15+', label: 'Technologies', icon: 'code' },
 ] satisfies Array<{ value: string; label: string; icon: IconName }>
 
-const trustedBrands = [
-  { name: 'Paystack', logo: paystackLogo },
-  { name: 'Kuda', logo: kudaLogo },
-  { name: 'Interswitch', logo: interswitchLogo },
-  { name: 'uLesson', logo: ulessonLogo },
-  { name: 'Healthtracka', logo: healthtrackaLogo },
-  { name: 'GIG Logistics', logo: gigLogo },
-  { name: 'Edves', logo: edvesLogo },
-]
 
 const services = [
   {
@@ -426,8 +409,8 @@ function Home() {
                 type="button"
                 onClick={() => handleFilterChange(filter)}
                 className={`rounded-xl px-6 py-3 text-sm font-semibold transition ${activeFilter === filter
-                    ? 'bg-[#1557ff] text-white shadow-[0_12px_22px_rgba(21,87,255,0.22)]'
-                    : 'bg-[#eef3fb] text-slate-800 hover:bg-[#dfeaff] hover:text-[#1557ff]'
+                  ? 'bg-[#1557ff] text-white shadow-[0_12px_22px_rgba(21,87,255,0.22)]'
+                  : 'bg-[#eef3fb] text-slate-800 hover:bg-[#dfeaff] hover:text-[#1557ff]'
                   }`}
               >
                 {filter}
