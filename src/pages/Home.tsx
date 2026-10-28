@@ -372,69 +372,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="about" className="border-t border-slate-100 bg-white px-6 pb-16 pt-10 lg:px-16">
-        <div className="mx-auto max-w-[1540px]">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-2xl font-bold tracking-[-0.035em] text-slate-950 lg:text-3xl">
-              Trusted by Businesses, Startups &amp; Organizations
-            </h2>
-            <p className="mt-4 text-base font-medium leading-7 text-slate-700">
-              I&apos;ve had the opportunity to collaborate with startups, growing
-              businesses, educational institutions, and organizations across different
-              industries to build reliable digital solutions that create measurable
-              impact.
-            </p>
-          </div>
 
-          <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 lg:grid-cols-7">
-            {trustedBrands.map((brand) => (
-              <div key={brand.name} className="flex h-14 items-center justify-center">
-                <img src={brand.logo} alt={brand.name} className="max-h-10 max-w-[140px] object-contain" />
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 grid items-stretch gap-12 lg:grid-cols-[0.98fr_1.02fr]">
-            <div className="overflow-hidden rounded-xl bg-[#eef4ff] shadow-[0_22px_55px_rgba(15,23,42,0.12)]">
-              <img
-                src={aboutImage}
-                alt="Nsikan Essoh working on software"
-                className="h-full min-h-[430px] w-full object-cover object-center"
-              />
-            </div>
-
-            <div className="flex max-w-[720px] flex-col justify-center py-2">
-              <p className="text-xs font-black uppercase leading-none text-[#1557ff]">
-                About Me
-              </p>
-              <h2 className="mt-5 text-3xl font-bold leading-tight tracking-[-0.04em] text-slate-950 lg:text-4xl">
-                Turning Ideas Into Powerful Software
-              </h2>
-              <p className="mt-5 text-base font-medium leading-8 text-slate-700">
-                Technology has always been more than a profession to me. It&apos;s a
-                way to solve meaningful problems. Every project begins with
-                understanding the people behind it, identifying the real challenge,
-                and crafting solutions that are practical, scalable, and user-friendly.
-              </p>
-              <p className="mt-5 text-base font-medium leading-8 text-slate-700">
-                My expertise spans full-stack web development, mobile application
-                development, cloud technologies, UI/UX implementation, system
-                architecture, API development, and AI integration. Whether building
-                products from scratch or improving existing systems, I focus on
-                creating software that delivers lasting value.
-              </p>
-
-              <a
-                href="/about"
-                className="mt-7 inline-flex w-fit items-center justify-center gap-3 rounded-md bg-[#1557ff] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(21,87,255,0.22)] transition hover:-translate-y-0.5 hover:bg-[#0f46d8]"
-              >
-                Read More About Me
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="services" className="bg-white px-6 pb-10 lg:px-16">
         <div className="mx-auto max-w-[1540px]">
@@ -487,11 +425,10 @@ function Home() {
                 key={filter}
                 type="button"
                 onClick={() => handleFilterChange(filter)}
-                className={`rounded-xl px-6 py-3 text-sm font-semibold transition ${
-                  activeFilter === filter
+                className={`rounded-xl px-6 py-3 text-sm font-semibold transition ${activeFilter === filter
                     ? 'bg-[#1557ff] text-white shadow-[0_12px_22px_rgba(21,87,255,0.22)]'
                     : 'bg-[#eef3fb] text-slate-800 hover:bg-[#dfeaff] hover:text-[#1557ff]'
-                }`}
+                  }`}
               >
                 {filter}
               </button>
